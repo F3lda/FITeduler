@@ -3,8 +3,8 @@
  * 
  * @brief Kořenový soubor webové aplikace
  * @date 2021-11-16 (YYYY-MM-DD)
- * @author Tereza Buchníčková (50 %), Tran Thanh Quang M. (50 %)
- * @update 2021-12-04 (YYYY-MM-DD)
+ * @author Tereza Buchníčková (cca 50 %), Tran Thanh Quang M. (cca 50 %), Karel Jirgl
+ * @update 2022-01-23 (YYYY-MM-DD)
 -->
 
 <!DOCTYPE html>
@@ -39,16 +39,12 @@
     <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
 
 
-    <script type="text/javascript" src="./js/common.js"></script>
-    <script type="text/javascript" src="./js/data.js"></script>
 
-    <script type="text/javascript" src="./js/mvc/view/view_buch.js"></script>
-    <script type="text/javascript" src="./js/mvc/view/view_tran.js"></script>
-    
-    <script type="text/javascript" src="./js/mvc/model/model.js"></script>
-    <script type="text/javascript" src="./js/mvc/view/view.js"></script>
-    <script type="text/javascript" src="./js/mvc/controller/controller.js"></script>
-    <script type="text/javascript" src="./js/mvc/mvc.js"></script>
+    <script type="text/javascript" src="./js/libs/iframecom.js"></script>
+    <script type="text/javascript" src="./js/libs/config.js"></script>
+    <script type="text/javascript" src="./js/callbacks.js"></script>
+    <script type="text/javascript" src="./js/functions.js"></script>
+    <script type="text/javascript" src="./js/view.js"></script>
 </head>
 
 <body>
@@ -70,6 +66,11 @@
 		<li class="nav-item">
           <a class="nav-link" href="#options">Možnosti předmětů</a>
         </li>
+        <!-- Terka sporty - start -->
+        <li class="nav-item">
+            <a class="nav-link" href="#sports">Sporty</a>
+        </li>
+        <!-- Terka sporty - end -->
         <li class="nav-item">
           <a class="nav-link" href="#info"><i class="fas fa-info-circle"></i></a>
         </li>
@@ -151,10 +152,10 @@
                 <button class="btn" id="button_change_yellow"><div class="bg-warning border border-dark" style="display: block; width: 15px; height: 15px;float: right;position: relative;"></div></button>
                 -->
 
-                <button id="show_dd" class="btn" title="Zobrazit označené"><i class="fas fa-eye"></i></button>
+                <button id="show_dd" class="btn" title="Zobrazit aktuální"><i class="fas fa-eye"></i></button>
                 -
-                <button id="hide_dd" class="btn" title="Skrýt označené"><i class="fas fa-eye-slash"></i></button>
-                <button id="star_dd" class="btn" title="Ohvězdičkovat označené"><i class="fas fa-star"></i></button>
+                <button id="hide_dd" class="btn" title="Skrýt aktuální"><i class="fas fa-eye-slash"></i></button>
+                <button id="star_dd" class="btn" title="Přidat aktuální do výsledného rozvrhu"><i class="fas fa-star"></i></button>
                 <input type="color" id="html5colorpicker_dropdown" title="Změnit barvu" onchange="" value="#029fa3" class="" style="width: 38px; height: 38px; position: relative; top: 9px;">
                 -
                 <button id="trash_dd" class="btn"><i class="fa fa-trash"></i></button>
@@ -278,10 +279,10 @@
                         </ul>
             
                         <div id="panel1" class="panel active" style="border-radius: 0 10px 10px 10px;">
-                            Dvojklikem na určitou hodinu v rozvrhu se zde zobrazí informace.
+                            Kliknutím pravým tlačítkem na určitou hodinu v rozvrhu se zde zobrazí informace.
                         </div>
                         <div id="panel2" class="panel" style="border-radius: 0 10px 10px 10px;">
-                            Dvojklikem na určitou hodinu v rozvrhu se zde zobrazí informace.
+                            Kliknutím pravým tlačítkem na určitou hodinu v rozvrhu se zde zobrazí informace.
                         </div>
                         <div id="panel3" class="panel" style="border-radius: 0 10px 10px 10px;">
                             
@@ -389,6 +390,33 @@
         </div>
 
 </div>
+
+
+
+<!-- Terka - start -->
+<!-- ****************************** --- SPORTS --- ****************************** -->
+<div id="frame_sports" style="display: none;" class="page_frame jumbotron">
+    <div id="sports">
+        <h1 id="hSports">Nabídka sportů</h1>
+        <button id="showAll" type="button" class="btn btn-primary btn-sm showAll mb-2">Zobrazit vše</button>
+        <input type="text" id="myInput" placeholder="Hledat sport..">
+        <div id="navSports">
+            <table id="myTable">
+                <tbody>
+                <tr>
+                <td id="sportName">Název</td>
+                <td id="sportAction"></td>
+                <td id="sportDay">Den</td>
+                <td id="sportTime">Čas</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <ul id="myUL">
+        </ul>
+    </div>
+</div>
+<!-- Terka - end -->
 
 
 

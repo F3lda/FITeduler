@@ -3,8 +3,8 @@
  * 
  * @brief Kaskádové styly aplikace
  * @date 2021-11-16 (YYYY-MM-DD)
- * @author Tereza Buchníčková (50 %), Tran Thanh Quang M. (50 %)
- * @update 2021-12-04 (YYYY-MM-DD)
+ * @author Tereza Buchníčková (cca 50 %), Tran Thanh Quang M. (cca 50 %), Karel Jirgl
+ * @update 2022-01-23 (YYYY-MM-DD)
  */
 
 body{
@@ -197,3 +197,92 @@ a, a:hover, a:focus, a:active {
     justify-self: end;
     align-self: end;
 }
+
+
+/* Sporty - start */
+#hSports {
+    margin-bottom: 5px;
+}
+
+.showAll {
+    float: right;
+}
+
+#frame_sports {
+    min-height: 400px;
+}
+
+#sports {
+    width: 80%; /* Full-width */
+    margin: auto;
+}
+
+#myInput {
+    background-image: url('../imgs/search.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    font-size: 16px; /* Increase font-size */
+    width: 100%; /* Full-width */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+  
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding-top: 3px;
+    padding-left: 0;
+    margin: 0;
+}
+
+#myUL li{
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li:hover:not(.header) {
+    background-color: #cce6ff; /* Add a hover effect to all links, except for headers */
+    box-shadow: 1px 1px 1px grey;
+}
+
+#navSports {
+    padding: 0 12px 0 12px;
+    font-size: 14px;
+}
+
+#myTable {
+    width: 100%;
+    margin: 0;
+}
+
+#sportName {
+    width:15%
+}
+
+#sportAction {
+    width:65%
+}
+
+#sportDay {
+    width:10%
+}
+
+#sportTime {
+    width:10%
+}
+
+.buttonOptions {
+    opacity: 0;
+}
+
+#myUL li:hover .buttonOptions {
+    opacity: 1;
+}
+/* Sporty - end */

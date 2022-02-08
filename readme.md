@@ -7,11 +7,11 @@ Aplikace na tvorbu školního rozvrhu pro studenty VUT FIT. Implementováno v Ja
 
 ## Prostředí
 
-Jakýkoliv moderní webový prohlížeč podporující HTML5 (Chrome, Firefox, Edge, Safari...).
+Jakýkoliv moderní webový prohlížeč podporující HTML5 (Chrome, Firefox, Edge, Safari...). Nutné otevřít na webovém serveru (např. localhost).
 
 ## Instalace
 
-Instalace není v této aplikaci potřeba. K rozjetí aplikace stačí spustit index.html v kořenovém adresáři.
+Instalace není v této aplikaci potřeba, ale je nutné aplikaci otevřít na webovém serveru. K zapnutí aplikace stačí spustit index.html v kořenovém adresáři.
 
 ## Autoři
 
